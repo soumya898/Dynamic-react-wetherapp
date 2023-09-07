@@ -1,0 +1,291 @@
+:root {
+    --section-overlay: rgba(0, 0, 0, 0.2);
+    --background-overlay: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-overlay);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.section {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.section__inputs, .section__temperature, .section__time_date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__inputs > input {
+    border: 0.8px solid white;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.section__inputs > input:focus {
+    outline: none;
+}
+
+.section__inputs > button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: white;
+}
+
+.section__inputs > button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon > h3 {
+    font-size: 15px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.section__temperature > h1 {
+    font-size: 60px;
+    color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .section__inputs > input {
+        font-size: 16px;
+    }
+
+    .section__inputs > button {
+        font-size: 16px;
+    }
+
+    .icon > h3 {
+        font-size: 12px;
+    }
+
+    .section__temperature > h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .section__inputs > input {
+        font-size: 16px;
+        padding: 0.3rem;
+    }
+
+    .section__inputs > button {
+        font-size: 16px;
+        padding: 5px 30px;
+    }
+
+    .icon > h3 {
+        font-size: 12px;
+    }
+
+    .section__temperature > h1 {
+        font-size: 40px;
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    .section__inputs > input {
+        font-size: 18px;
+        padding: 0.4rem;
+    }
+
+    .section__inputs > button {
+        font-size: 18px;
+        padding: 8px 40px;
+    }
+
+    .icon > h3 {
+        font-size: 14px;
+    }
+
+    .section__temperature > h1 {
+        font-size: 50px;
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 992px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .section__inputs > input {
+        font-size: 20px;
+        padding: 0.5rem;
+    }
+
+    .section__inputs > button {
+        font-size: 20px;
+        padding: 10px 50px;
+    }
+
+    .icon > h3 {
+        font-size: 15px;
+    }
+
+    .section__temperature > h1 {
+        font-size: 60px;
+    }
+}
+/* Extra small screens (e.g., phones) */
+@media (max-width: 576px) {
+    .section__inputs > input {
+        font-size: 16px;
+        padding: 0.3rem;
+        flex: 0 100%; /* Make input take full width on small screens */
+    }
+
+    .section__inputs > button {
+        font-size: 16px;
+        padding: 5px 30px;
+        margin-top: 10px; /* Add some spacing between the button and the input on small screens */
+        flex: 0 100%; /* Make button take full width on small screens */
+    }
+}
+
+/* Small screens (e.g., small tablets) */
+@media (min-width: 577px) and (max-width: 767px) {
+    .section__inputs > input {
+        font-size: 18px;
+        padding: 0.4rem;
+    }
+
+    .section__inputs > button {
+        font-size: 18px;
+        padding: 8px 40px;
+        margin-top: 0; /* Reset margin on small tablets */
+        flex: 0 48%; /* Make input and button take up 48% of the container each */
+    }
+}
+
+/* Medium screens (e.g., large tablets and small laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section__inputs > input {
+        font-size: 20px;
+        padding: 0.5rem;
+    }
+
+    .section__inputs > button {
+        font-size: 20px;
+        padding: 10px 50px;
+        margin-top: 0; /* Reset margin on medium screens */
+        flex: 0 48%; /* Make input and button take up 48% of the container each */
+    }
+}
+
+
+
+/* Extra small screens (e.g., phones) */
+@media (max-width: 576px) {
+    .section__inputs > input {
+        font-size: 16px;
+        padding: 0.3rem;
+        flex: 0 100%; /* Make input take full width on small screens */
+    }
+
+    .section__inputs > button {
+        font-size: 16px;
+        padding: 5px 30px;
+        margin-top: 10px; /* Add some spacing between the button and the input on small screens */
+        flex: 0 100%; /* Make button take full width on small screens */
+    }
+}
+
+/* Small screens (e.g., small tablets) */
+@media (min-width: 577px) and (max-width: 767px) {
+    .section__inputs > input {
+        font-size: 18px;
+        padding: 0.4rem;
+    }
+
+    .section__inputs > button {
+        font-size: 18px;
+        padding: 8px 40px;
+        margin-top: 0; /* Reset margin on small tablets */
+        flex: 0 48%; /* Make input and button take up 48% of the container each */
+    }
+}
+
+/* Medium screens (e.g., large tablets and small laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section__inputs > input {
+        font-size: 20px;
+        padding: 0.5rem;
+    }
+
+    .section__inputs > button {
+        font-size: 20px;
+        padding: 10px 50px;
+        margin-top: 0; /* Reset margin on medium screens */
+        flex: 0 48%; /* Make input and button take up 48% of the container each */
+    }
+}
+
+/* Screens with a width of 700px and height of 400px or smaller */
+@media (max-width: 700px) and (max-height: 400px) {
+    .app {
+        background-size: contain; /* Ensure the background image fits within the container */
+    }
+}
